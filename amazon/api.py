@@ -365,6 +365,24 @@ class AmazonProduct(object):
             Brand (string)
         """
         return self._safe_get_element_text('ItemAttributes.Brand')
+        
+    @property
+    def eligibletrade(self):
+        """IsEligibleForTradeIn.
+
+        :return:
+            IsEligibleForTradeIn (string)
+        """
+        return self._safe_get_element_text('ItemAttributes.IsEligibleForTradeIn')    
+
+    @property
+    def tradevalue(self):
+        """TradeInValue.
+
+        :return:
+            TradeInValue (string)
+        """
+        return self._safe_get_element_text('ItemAttributes.TradeInValue')    
 
     @property
     def isbn(self):
